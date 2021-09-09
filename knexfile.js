@@ -16,7 +16,7 @@ module.exports = {
     }
   },
 
-  staging: {
+  testing: {
     ...common,
     connection: {
       filename: './data/test.db3'
