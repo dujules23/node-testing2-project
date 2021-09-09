@@ -4,7 +4,7 @@ const common = {
   client: 'sqlite3',
   useNullAsDefault: true,
   migrations: { directory: './data/migrations' },
-  seeds: { directory: '.data/seeds' },
+  seeds: { directory: './data/seeds' },
 }
 
 module.exports = {
