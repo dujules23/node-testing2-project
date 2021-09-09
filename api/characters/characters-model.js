@@ -16,8 +16,9 @@ function getById(id) {
   return null
 }
 
-function insert(character) {
-  return null
+async function insert(character) {
+  const [id] = await db("characters").insert(character)
+  return db("characters").where({id}).first()
 }
 
 function remove(id) {
