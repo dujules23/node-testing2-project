@@ -43,4 +43,16 @@ describe("Characters Model", () =>{
       expect(character).toMatchObject({id:1, ...zato})
     })
   })
+  describe("remove function", () => {
+    it("removes character from the db", async () =>{
+      let all
+      await Character.remove(zato)
+      all = await db("characters")
+      expect(all).toHaveLength(0)
+
+      await Character.remove(jacko)
+      all = await db("characters")
+      expect(all).toHaveLength(0)
+    })
+  })
 })
